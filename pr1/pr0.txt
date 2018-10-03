@@ -1,0 +1,42 @@
+variables de entorno:
+
+$$ is the PID of the current process.
+$? is the return code of the last executed command.
+$SHELL el shell que estamos ejecutando
+$PWD working directory
+$UID identificador de proceso(usuario)
+$PUID padre del proceso(usuario)
+
+
+para establecer variables de shell (propias solo para ese UID)
+
+con env vemos las variables de entorno con set vemos las variables de shell
+set | grep VARIABLE
+printenv | grep VARIABLE
+
+para crearlas basta con VARIABLE= "valor" 
+mostrarlas por pantalla $VARIABLE , te devuelve el valor
+
+si la queremos transformar en una variable de entorno la tenemos que exportar
+export VARIABLE
+
+podemos crearlas y exportarlas en la misma linea con export VARIABLE="valor"
+
+para volverlas a definir como variables de shell export -n VARIABLE
+si la queremos borrar completamente unset VARIABLE
+
+_______________________________________
+
+para agregar la carpeta al path
+
+PATH=$PATH:$PWD
+PATH=./:$PATH
+
+antes o despues según preferencia
+
+_______________________________________
+
+redirección basica por pantalla 1>, 2> para salida de error 2>&1 duplicar la salida de error por salida estandar
+echo -e "zorro\npájaro\nvaca\ncaballo\nabeja" | sort 
+
+

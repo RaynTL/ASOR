@@ -1,0 +1,11 @@
+1. primero montamos las dos maquinas virtuales vm1 y vm2 con la herramienta vtopol
+
+netprefix inet
+machine 1 0 0
+machine 2 0 0
+
+2. configuramos las ip de las maquinas vm1 y vm2
+
+ip link set dev <> up
+ip a add <> dev <>
+
